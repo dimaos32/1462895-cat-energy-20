@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кэт Энерджи | Функциональное питание для котов</title>
+</head>
+
+<body class="page__body">
+
+<header class="page-header">
+  <a href="index.html" class="page-header__logo">
+    <img src="" alt="Кэт энерджи" width="191" height="38">
+  </a>
+
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item">
+        <a class="site-list__link" href="index.html">Главная</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link">Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-main">
+
+<h1 class="page-main__title">Подбор программы</h1>
+
+<section class="program-selection">
+  <h2 class="visually-hidden">Форма подбора программы</h2>
+
+  <p class="program-selection__annotation">Заполните анкету, и мы подберем
+    программу питания для вашего кота</p>
+
+  <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
+    <fieldset class="program-selection__cat-about">
+      <label class="program-selection__label">
+        Имя:*
+        <input class="program-selection__input" type="text" name="cat-name" placeholder="Барсик" required>
+      </label>
+      <label class="program-selection__label">
+        Вес (кг):*
+        <input class="program-selection__input" type="text" name="cat-weight" pattern="[0-9]{1,2}" placeholder="7" required>
+      </label>
+      <label class="program-selection__label">
+        Возраст (лет):
+        <input class="program-selection__input" type="text" name="cat-age" pattern="[0-9]{1,2}" placeholder="7">
+      </label>
+    </fieldset>
+
+    <fieldset class="program-selection__type">
+      <label class="program-selection__label">
+        <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim">
+        Похудение
+      </label>
+      <label class="program-selection__label">
+        <input class="program-selection__radio" type="radio" name="program-selection__type" value="pro">
+        Набор массы
+      </label>
+      <label class="program-selection__label">
+        <input class="program-selection__radio" type="radio" name="program-selection__type" value="consultation">
+        Не знаю (Нужен ваш совет)
+      </label>
+    </fieldset>
+
+    <fieldset class="program-selection__user-personal">
+      <legend class="program-selection__legend">
+        Контактные данные<br>
+        (владельца кота)
+      </legend>
+      <label class="program-selection__label">
+        E-mail:*
+        <input class="program-selection__input" type="email" name="program-selection__email" placeholder="kuklachev@gmail.com" required>
+      </label>
+      <label class="program-selection__label">
+        Телефон:*
+        <input class="program-selection__input" type="tel" name="program-selection__phone" placeholder="8 (960) 900-60-90" required>
+      </label>
+    </fieldset>
+    <fieldset class="program-selection__comment">
+      <legend class="program-selection__legend">
+        Комментарий
+      </legend>
+      <textarea name="program-selection__comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+    </fieldset>
+    <button class="button" type="submit">отправить заявку</button>
+
+    <small class="program-selection__footnote">
+      * — Обязательные поля
+    </small>
+  </form>
+</section>
+
+<section class="contacts">
+  <h2 class="visually-hidden">Контакты и схама проезда</h2>
+
+  <p class="contacts__dealesrs-invite">
+    Приглашаем<br>
+    к сотрудничеству<br>
+    дилеров!
+  </p>
+  <p class="contacts__address">
+    ул. Большая Конюшенная, д. 19/8<br>
+    Санкт-Петербург
+  </p>
+  <img class="map" src="" alt="Магазин Кэт Энерджи в Санкт-Петербурге по адресу ул. Большая Конюшенная, д. 19/8" width="320" height="362">
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <a href="index.html" class="page-footer__logo">
+    <img src="" alt="Кэт энерджи" width="128" height="24">
+  </a>
+
+  <div class="page-footer__social social">
+    <ul class="social__list">
+      <li class="social__item">
+        <a href="#" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link--instagram">Мы в Инстаграме</a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link--facebook">Мы в Фэйсбуке</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="page-footer__copyright copyright">
+    <p class="copyright__text">Разработано:</з>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+  </div>
+</footer>
+
+</body>
+
+</html>
