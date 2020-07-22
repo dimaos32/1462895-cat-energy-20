@@ -1,0 +1,17 @@
+.page-footer {
+  padding: 0 20px;
+  background-color: $page-footer--bg;
+}
+
+.page-footer__logo {
+  margin: 40px auto 30px;
+}
+
+.page-footer__social {
+  border-top: 1px solid $page-footer--border;
+  border-bottom: 1px solid $page-footer--border;
+}
+
+.page-footer__copyright {
+  margin: 22px auto;
+}

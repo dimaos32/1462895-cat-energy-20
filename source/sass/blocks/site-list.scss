@@ -1,0 +1,17 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__link {
+  display: block;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: Oswald, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: $site-list--link;
+  border-top: 1px solid $site-list--border;
+}
