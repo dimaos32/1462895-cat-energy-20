@@ -14,4 +14,8 @@
   text-align: center;
   color: $site-list--link;
   border-top: 1px solid $site-list--border;
+
+  .site-list__item:last-of-type & {
+    border-bottom: 1px solid $site-list--border;
+  }
 }

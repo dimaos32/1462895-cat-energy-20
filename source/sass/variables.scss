@@ -1,6 +1,8 @@
 $dark-night: #111111;
+$dark-coal: #222222;
 $dark-dim: #444444;
 $grey: #CDCDCD;
+$grey-almost-light: #D3D3D3;
 $grey-light: #D9D9D9;
 $light: #E6E6E6;
 $light-snow: #EAEAEA;
@@ -14,6 +16,9 @@ $basic-site: #68B738;
 
 $button--link: $white;
 $button--bg: $basic-site;
+$button--show-all--link: $dark-dim;
+$button--show-all--bg: $light-bright;
+
 
 $page--txt: $dark-dim;
 $page--bg: $white;
@@ -40,7 +45,21 @@ $feedback--toggle-bg: $white;
 $feedback--toggle-border: $grey;
 
 $contacts--txt: $dark-night;
-$contacts--map-bg: $light-snow;
+$contacts--bg: $light-bright;
 
 $page-footer--bg: $light-bright;
 $page-footer--border: $grey-light;
+
+$catalog--txt: $black;
+$catalog--txt-alt: $dark-night;
+$catalog--border: $light-snow;
+$catalog--border-alt: $basic-site;
+$catalog--cross: $grey-almost-light;
+
+$product-card--txt: $dark-coal;
+$product-card--border: $light-snow;
+
+$catalog-promo--txt: $white;
+
+$program-selection--txt: $black;
+$program-selection--border: $light;

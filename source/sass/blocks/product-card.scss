@@ -1,0 +1,90 @@
+.product-card {
+  padding: 20px;
+  padding-bottom: 25px;
+  background: 20px 5px no-repeat;
+  border-bottom: 1px solid $product-card--border;
+
+  &--alternative {
+    margin: 0 20px;
+    padding: 10px 0 20px;
+  }
+
+  &--chicken-500 {
+    background-image: url("../../img/chicken-small-mobile@1x.jpg");
+  }
+
+  &--chicken-1000 {
+    background-image: url("../../img/chicken-big-mobile@1x.jpg");
+  }
+
+  &--fish-500 {
+    background-image: url("../../img/fish-small-mobile@1x.jpg");
+  }
+
+  &--fish-1000 {
+    background-image: url("../../img/fish-big-mobile@1x.jpg");
+  }
+
+  &--buckwheat-500 {
+    background-image: url("../../img/buckwheat-small-mobile@1x.jpg");
+  }
+
+  &--buckwheat-1000 {
+    background-image: url("../../img/buckwheat-big-mobile@1x.jpg");
+  }
+
+  &--rice-500 {
+    background-image: url("../../img/rice-small-mobile@1x.jpg");
+  }
+}
+
+.product-card__title {
+  width: 100px;
+  margin: 0;
+  margin-left: 140px;
+  margin-bottom: 20px;
+  font-family: Oswald, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $product-card--txt;
+
+  &--alternative {
+    width: auto;
+    margin: 0;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+}
+
+.product-card__product-properties {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 0;
+  margin-left: 140px;
+  margin-bottom: 20px;
+  font-size: 12px;
+
+  &--alternative {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+}
+
+.product-card__product-property {
+}
+
+.product-card__product-property-description {
+  margin: 0;
+  text-align: right;
+}
+
+

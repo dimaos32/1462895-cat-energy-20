@@ -7,4 +7,9 @@
   text-align: center;
   color: $button--link;
   background-color: $button--bg;
+
+  &--show-all {
+    color: $button--show-all--link;
+    background-color: $button--show-all--bg;
+  }
 }
