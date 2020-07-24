@@ -4,11 +4,11 @@
   min-height: 500px;
   padding: 20px;
   line-height: 1;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   color: $promo--txt;
-  background: url("../../img/index-can-mobile@1x.png") center 167px no-repeat,
-              url("../../img/index-background-mobile@1x.jpg") center top no-repeat;
+  background: url("../img/index-can-mobile@1x.png") center 167px no-repeat,
+    url("../img/index-background-mobile@1x.jpg") center top no-repeat;
 }
 
 .promo__title {

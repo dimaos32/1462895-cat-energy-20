@@ -25,9 +25,10 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 1.5;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $program--txt;
+
   &::before {
     content: "";
     position: absolute;
@@ -38,6 +39,7 @@
     background-color: $program--icon-bg;
     border-radius: 50%;
   }
+
   &--slim::after {
     content: "";
     position: absolute;
@@ -45,8 +47,9 @@
     left: 9px;
     width: 36px;
     height: 50px;
-    background: url("../../img/icon-cat-slim.svg") 0 0 no-repeat;
+    background: url("../img/icon-cat-slim.svg") 0 0 no-repeat;
   }
+
   &--pro::after {
     content: "";
     position: absolute;
@@ -54,7 +57,7 @@
     left: -7px;
     width: 67px;
     height: 28px;
-    background: url("../../img/icon-cat-pro.svg") 0 0 no-repeat;
+    background: url("../img/icon-cat-pro.svg") 0 0 no-repeat;
   }
 }
 
@@ -69,7 +72,7 @@
   margin-top: 20px;
   font-size: 16px;
   line-height: 1;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $program--link;
 }

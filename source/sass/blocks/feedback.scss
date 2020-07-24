@@ -9,7 +9,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 1;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: $feedback--txt;
 }
 
@@ -33,7 +33,7 @@
   padding-top: 15px;
   font-size: 24px;
   line-height: 1;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   color: $feedback--txt;
   border: 1px solid $feedback--border;
@@ -46,7 +46,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 85px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 1;
 
@@ -57,7 +57,7 @@
 
 .feedback__expenses {
   margin-bottom: 45px;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: $feedback--txt;
@@ -77,7 +77,7 @@
 
 .feedback__toggle-value {
   width: 70px;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1;
   text-align: center;
@@ -105,5 +105,3 @@
     border-radius: 3px;
   }
 }
-
-

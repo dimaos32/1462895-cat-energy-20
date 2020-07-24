@@ -8,7 +8,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 1;
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: $how-it-works--txt;
 }
 
@@ -41,18 +41,18 @@
   }
 
   &--healthy::before {
-    background-image: url("../../img/advantage-leaf@1x.png");
+    background-image: url("../img/advantage-leaf@1x.png");
   }
 
   &--state::before {
-    background-image: url("../../img/advantage-powder@1x.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &--dosage::before {
-    background-image: url("../../img/advantage-dining@1x.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &--time::before {
-    background-image: url("../../img/advantage-clock@1x.png");
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }
