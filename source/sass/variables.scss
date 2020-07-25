@@ -14,7 +14,7 @@ $black: #000000;
 $white: #ffffff;
 
 $basic-site: #68b738;
-$special-site: #64A83B;
+$special-site: #64a83b;
 
 // Fonts
 
@@ -40,6 +40,7 @@ $button--show-all--bg: $light-bright;
 $page--txt: $dark-dim;
 $page--txt-alt: $black;
 $page--bg: $white;
+$page--bg-alt: $light-bright;
 
 $site-list--txt-desktop: $white;
 $site-list--border-mobile: $light;
@@ -48,9 +49,7 @@ $site-list--border-tablet: $basic-site;
 $promo--txt-mobile: $white;
 $promo--bg-desktop: $special-site;
 
-$program--txt: $black;
 $program--link: $black;
-$program--bg: $light-bright;
 $program--border: $grey-light;
 $program--icon-bg: $basic-site;
 

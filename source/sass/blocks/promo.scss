@@ -1,5 +1,6 @@
 .promo {
   @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
     background: url("../../img/index-background-desktop@1x.jpg") bottom right no-repeat,
       linear-gradient(to right, transparent 50%, $promo--bg-desktop 50%);
   }
