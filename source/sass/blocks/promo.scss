@@ -1,0 +1,28 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  padding: 20px;
+  line-height: 1;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  color: $promo--txt;
+  background: url("../img/index-can-mobile@1x.png") center 167px no-repeat,
+    url("../img/index-background-mobile@1x.jpg") center top no-repeat;
+}
+
+.promo__title {
+  margin: 5px 0 25px;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.promo__slogan {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  margin-top: auto;
+}
