@@ -53,11 +53,11 @@
     padding: 8px 0;
     font-size: 20px;
     line-height: 1.5;
-    color: orange;
+    color: $site-list--txt-desktop;
 
     &--current {
       padding-bottom: 6px;
-      border-bottom: 2px solid orange;
+      border-bottom: 2px solid $site-list--txt-desktop;
     }
   }
 }

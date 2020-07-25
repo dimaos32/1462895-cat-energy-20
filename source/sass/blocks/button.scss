@@ -1,11 +1,20 @@
 .button {
   display: block;
-  padding: 11px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.25;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: $button--link;
   background-color: $button--bg;
+
+  &--promo {
+    width: 245px;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 
   &--show-all {
     color: $button--show-all--link;

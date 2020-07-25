@@ -14,10 +14,12 @@ $black: #000000;
 $white: #ffffff;
 
 $basic-site: #68b738;
+$special-site: #64A83B;
 
 // Fonts
 
 $oswald: "Oswald", "Arial", sans-serif;
+$arial: "Arial", "Helvetica", sans-serif;
 
 
 // Viewports
@@ -39,10 +41,12 @@ $page--txt: $dark-dim;
 $page--txt-alt: $black;
 $page--bg: $white;
 
+$site-list--txt-desktop: $white;
 $site-list--border-mobile: $light;
 $site-list--border-tablet: $basic-site;
 
-$promo--txt: $white;
+$promo--txt-mobile: $white;
+$promo--bg-desktop: $special-site;
 
 $program--txt: $black;
 $program--link: $black;
