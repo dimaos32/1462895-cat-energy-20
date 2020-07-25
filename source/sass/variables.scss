@@ -1,3 +1,5 @@
+// Colors
+
 $dark-night: #111111;
 $dark-coal: #222222;
 $dark-dim: #444444;
@@ -13,6 +15,19 @@ $white: #ffffff;
 
 $basic-site: #68b738;
 
+// Fonts
+
+$oswald: "Oswald", "Arial", sans-serif;
+
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$mobile-width-only: 767px;
+
+
+// Blocks
 
 $button--link: $white;
 $button--bg: $basic-site;
@@ -21,10 +36,11 @@ $button--show-all--bg: $light-bright;
 
 
 $page--txt: $dark-dim;
+$page--txt-alt: $black;
 $page--bg: $white;
 
-$site-list--link: $black;
-$site-list--border: $light;
+$site-list--border-mobile: $light;
+$site-list--border-tablet: $basic-site;
 
 $promo--txt: $white;
 
