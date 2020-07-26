@@ -1,3 +1,14 @@
+.how-it-works {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #E6E6E6;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+  }
+
+}
+
 .how-it-works__container {
   padding: 20px;
   padding-top: 30px;
@@ -27,6 +38,7 @@
 }
 
 .how-it-works__list {
+  counter-reset: block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -69,19 +81,23 @@
     }
 
     &--healthy::after {
-      content: "1";
+      counter-increment: block;
+      content: counter(block);
     }
 
     &--state::after {
-      content: "2";
+      counter-increment: block;
+      content: counter(block);
     }
 
     &--dosage::after {
-      content: "3";
+      counter-increment: block;
+      content: counter(block);
     }
 
     &--time::after {
-      content: "4";
+      counter-increment: block;
+      content: counter(block);
     }
   }
 
