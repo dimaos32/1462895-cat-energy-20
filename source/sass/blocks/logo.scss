@@ -1,20 +1,7 @@
 .logo {
   display: block;
 
-  @media (min-width: $tablet-width) {
-    height: 52px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 59px;
-  }
-
   img {
     display: block;
-
-    @media (max-width: $mobile-width-only) {
-      margin: 0 auto;
-      transform: translateX(-44px);
-    }
   }
 }

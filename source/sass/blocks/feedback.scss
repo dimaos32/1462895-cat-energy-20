@@ -28,7 +28,6 @@
 }
 
 .feedback__description {
-
   @media (min-width: $desktop-width) {
     width: 440px;
   }
@@ -92,7 +91,7 @@
     margin: 0;
   }
 
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 55px;
   }
 }
@@ -205,5 +204,4 @@
   width: 85px;
   height: 14px;
   background-color: $basic-site;
-
 }
