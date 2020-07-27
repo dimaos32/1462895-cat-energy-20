@@ -42,7 +42,8 @@
     font-size: 18px;
     line-height: 1.33;
 
-    &--current {
+    &--current,
+    &--index-page-current {
       padding-bottom: 8px;
       border-bottom: 2px solid $site-list--border-tablet;
     }
@@ -52,11 +53,17 @@
     padding: 8px 0;
     font-size: 20px;
     line-height: 1.5;
-    color: $site-list--txt-desktop;
+
+    &--index-page {
+      color: $site-list--txt-desktop;
+
+      &-current {
+        border-bottom: 2px solid $site-list--txt-desktop;
+      }
+    }
 
     &--current {
       padding-bottom: 6px;
-      border-bottom: 2px solid $site-list--txt-desktop;
     }
   }
 }

@@ -12,13 +12,16 @@
   }
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
+
+    &--index-page {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: $desktop-width) {
