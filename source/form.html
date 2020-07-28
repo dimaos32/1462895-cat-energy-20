@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт Энерджи | Функциональное питание для котов</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -38,43 +39,50 @@
 <main>
 
 <section class="program-selection">
-  <h1 class="program-selection__title">Подбор программы</h1>
-
-  <p class="program-selection__annotation">
-    Заполните анкету, и мы подберем<br>
-    программу питания для вашего кота
-  </p>
+  <div class="container">
+    <h1 class="program-selection__title">Подбор программы</h1>
+    <p class="program-selection__annotation">
+      Заполните анкету, и мы подберем<br>
+      программу питания для вашего кота
+    </p>
+  </div>
 
   <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
-    <fieldset class="program-selection__cat-about">
-      <label class="program-selection__label program-selection__label--input">
-        <span>Имя:*</span>
-        <input class="program-selection__input" type="text" name="cat-name" placeholder="Барсик" required>
-      </label>
-      <label class="program-selection__label program-selection__label--input">
-        <span>Вес (кг):*</span>
-        <input class="program-selection__input" type="text" name="cat-weight" pattern="[0-9]{1,2}" placeholder="7" required>
-      </label>
-      <label class="program-selection__label program-selection__label--input">
-        <span>Возраст (лет):</span>
-        <input class="program-selection__input" type="text" name="cat-age" pattern="[0-9]{1,2}" placeholder="7">
-      </label>
-    </fieldset>
+    <div class="program-selection__grid container">
+      <fieldset class="program-selection__cat-about">
+        <div class="program-selection__11">
+          <label class="program-selection__label program-selection__label--input">
+            <span>Имя:*</span>
+            <input class="program-selection__input" type="text" name="cat-name" placeholder="Барсик" required>
+          </label>
+          <label class="program-selection__label program-selection__label--input">
+            <span>Вес (кг):*</span>
+            <input class="program-selection__input" type="text" name="cat-weight" pattern="[0-9]{1,2}" placeholder="7" required>
+          </label>
+          <label class="program-selection__label program-selection__label--input">
+            <span>Возраст (лет):</span>
+            <input class="program-selection__input" type="text" name="cat-age" pattern="[0-9]{1,2}" placeholder="7">
+          </label>
+        </div>
+      </fieldset>
 
-    <fieldset class="program-selection__type">
-      <label class="program-selection__label program-selection__label--radio">
-        <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim">
-        Похудение
-      </label>
-      <label class="program-selection__label program-selection__label--radio">
-        <input class="program-selection__radio" type="radio" name="program-selection__type" value="pro">
-        Набор массы
-      </label>
-      <label class="program-selection__label program-selection__label--radio">
-        <input class="program-selection__radio" type="radio" name="program-selection__type" value="consultation">
-        Не знаю (Нужен ваш совет)
-      </label>
-    </fieldset>
+      <fieldset class="program-selection__type">
+        <div class="program-selection__11">
+          <label class="program-selection__label program-selection__label--radio">
+            <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim">
+            Похудение
+          </label>
+          <label class="program-selection__label program-selection__label--radio">
+            <input class="program-selection__radio" type="radio" name="program-selection__type" value="pro">
+            Набор массы
+          </label>
+          <label class="program-selection__label program-selection__label--radio">
+            <input class="program-selection__radio" type="radio" name="program-selection__type" value="consultation">
+            Не знаю (Нужен ваш совет)
+          </label>
+        </div>
+      </fieldset>
+    </div>
 
     <fieldset class="program-selection__user-personal">
       <div class="program-selection__wrapper">
