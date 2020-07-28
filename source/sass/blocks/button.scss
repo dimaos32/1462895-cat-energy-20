@@ -10,14 +10,25 @@
   background-color: $button--bg;
 
   &--promo {
-    width: 245px;
-    padding: 15px;
-    font-size: 20px;
-    line-height: 1.2;
+    @media (min-width: $tablet-width) {
+      width: 245px;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
   }
 
   &--show-all {
     color: $button--show-all--link;
     background-color: $button--show-all--bg;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      width: 245px;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
   }
 }

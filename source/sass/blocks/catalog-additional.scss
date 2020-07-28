@@ -1,0 +1,138 @@
+.catalog-additional {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 85px;
+  }
+}
+
+.catalog-additional__title-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: $catalog--border-alt;
+
+    @media (min-width: $tablet-width) {
+      top: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 100px;
+    }
+  }
+}
+
+.catalog-additional__title-wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.catalog-additional__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.catalog-additional__title {
+  width: fit-content;
+  margin: 0;
+  padding: 30px 20px 35px;
+  z-index: 5;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  font-family: $oswald;
+  color: $page--txt-alt;
+  background-color: $page--bg;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 30px 80px;
+    font-size: 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 75px 40px 80px;
+    font-size: 36px;
+  }
+}
+
+.catalog-additional-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.catalog-additional__list {
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-additional__promo {
+  min-height: 289px;
+  margin-top: 40px;
+  padding-top: 5px;
+  background: url("../img/gift-photo-mobile@1x.jpg") center top no-repeat;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    margin-top: 70px;
+    background: url("../img/gift-photo-tablet@1x.jpg") center top no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    min-height: 289px;
+    margin-top: 0;
+    margin-left: 80px;
+    background: url("../img/gift-photo-desktop@1x.jpg") center top no-repeat;
+  }
+}
+
+.catalog-additional__promo-terms {
+  margin: 0;
+  margin-top: 185px;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: $catalog-promo--txt;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    margin-left: 425px;
+    text-align-last: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-top: 185px;
+    text-align-last: center;
+  }
+}

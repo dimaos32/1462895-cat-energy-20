@@ -11,8 +11,10 @@
   }
 
   &--alternative {
-    margin: 0 20px;
+    width: auto;
+    margin: 0;
     padding: 10px 0 20px;
+    border-bottom: 1px solid $product-card--border-alt;
   }
 
   @media (min-width: $tablet-width) {
@@ -25,6 +27,24 @@
 
     &--not-product {
       background: transparent;
+    }
+
+    &--alternative {
+      min-height: auto;
+      margin-top: -1px;
+      padding: 25px 40px 30px;
+      background: transparent;
+      border: 1px solid $product-card--border-alt;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--alternative {
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 0 16px;
+      border-right: none;
+      border-left: none;
     }
   }
 }
@@ -83,6 +103,12 @@
     transform: translateX(-14px) rotate(90deg);
   }
 
+  &--alternative {
+    width: auto;
+    margin: 0;
+    margin-bottom: 13px;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0 auto 20px;
     width: 150px;
@@ -103,6 +129,21 @@
     &--not-product::after {
       transform: translateX(-29px) rotate(90deg);
     }
+
+    &--alternative {
+      width: auto;
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--alternative {
+      width: 325px;
+      margin: 0;
+      text-align: left;
+    }
   }
 }
 
@@ -115,8 +156,44 @@
   list-style: none;
   font-size: 12px;
 
+  &--alternative {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
+
+    &--alternative {
+      margin: 0;
+      margin-top: auto;
+      margin-bottom: 20px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.25;
+      }
+
+      p:last-of-type {
+        width: 95px;
+        text-align: right;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--alternative {
+      width: 325px;
+      margin: 0;
+      padding-right: 40px;
+    }
   }
 }
 
