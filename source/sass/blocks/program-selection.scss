@@ -24,14 +24,14 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
-    padding: 0 40px;
+    margin: 0 40px 65px;
     font-size: 20px;
     line-height: 1.5;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    margin: 0;
+    margin-bottom: 65px;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 
   &--radio:not(:last-of-type) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   &--checkbox:not(:last-of-type) {
@@ -102,7 +102,7 @@
   border: 1px solid $program-selection--border;
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
   }
 }
 
@@ -136,7 +136,8 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 20px 25px;
+  padding: 0;
+  padding-bottom: 25px;
   border: none;
 
   @media (max-width: $mobile-width-only) {
@@ -144,10 +145,12 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin: 0 40px;
     padding-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     padding-bottom: 0;
   }
 }
@@ -159,8 +162,13 @@
   border-bottom: 1px solid $program-selection--border-alt;
 
   @media (min-width: $tablet-width) {
+    margin: 0 40px;
     padding: 30px;
     border: 1px solid $program-selection--border;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
