@@ -48,9 +48,9 @@
   </div>
 
   <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
-    <div class="program-selection__grid container">
+    <div class="program-selection__form-container container">
       <fieldset class="program-selection__cat-about">
-        <div class="program-selection__11">
+        <div class="program-selection__wrapper">
           <label class="program-selection__label program-selection__label--input">
             <span>Имя:*</span>
             <input class="program-selection__input" type="text" name="cat-name" placeholder="Барсик" required>
@@ -67,7 +67,7 @@
       </fieldset>
 
       <fieldset class="program-selection__type">
-        <div class="program-selection__11">
+        <div class="program-selection__wrapper">
           <label class="program-selection__label program-selection__label--radio">
             <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim">
             Похудение
@@ -85,20 +85,26 @@
     </div>
 
     <fieldset class="program-selection__user-personal">
-      <div class="program-selection__wrapper">
-        <legend class="program-selection__legend">
-          Контактные данные<br>
-          (владельца кота)
-        </legend>
+      <div class="program-selection__decor-container">
+        <div class="program-selection__decor-wrapper">
+          <legend class="program-selection__legend">
+            Контактные данные<br>
+            (владельца кота)
+          </legend>
+        </div>
       </div>
-      <label class="program-selection__label program-selection__label--input">
-        <span>E-mail:*</span>
-        <input class="program-selection__input" type="email" name="program-selection__email" placeholder="kuklachev@gmail.com" required>
-      </label>
-      <label class="program-selection__label program-selection__label--input">
-        <span>Телефон:*</span>
-        <input class="program-selection__input" type="tel" name="program-selection__phone" placeholder="8 (960) 900-60-90" required>
-      </label>
+      <div class="container">
+        <div class="program-selection__user-personal-container">
+          <label class="program-selection__label program-selection__label--input">
+            <span>E-mail:*</span>
+            <input class="program-selection__input" type="email" name="program-selection__email" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="program-selection__label program-selection__label--input">
+            <span>Телефон:*</span>
+            <input class="program-selection__input" type="tel" name="program-selection__phone" placeholder="8 (960) 900-60-90" required>
+          </label>
+        </div>
+      </div>
     </fieldset>
 
     <fieldset class="program-selection__comment">
