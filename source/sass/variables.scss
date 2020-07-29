@@ -1,3 +1,5 @@
+// Colors
+
 $dark-night: #111111;
 $dark-coal: #222222;
 $dark-dim: #444444;
@@ -12,7 +14,22 @@ $black: #000000;
 $white: #ffffff;
 
 $basic-site: #68b738;
+$special-site: #64a83b;
 
+// Fonts
+
+$oswald: "Oswald", "Arial", sans-serif;
+$arial: "Arial", "Helvetica", sans-serif;
+
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$mobile-width-only: 767px;
+
+
+// Blocks
 
 $button--link: $white;
 $button--bg: $basic-site;
@@ -21,36 +38,31 @@ $button--show-all--bg: $light-bright;
 
 
 $page--txt: $dark-dim;
+$page--txt-alt: $black;
 $page--bg: $white;
+$page--bg-alt: $light-bright;
 
-$site-list--link: $black;
-$site-list--border: $light;
+$site-list--txt-desktop: $white;
+$site-list--border-mobile: $light;
+$site-list--border-tablet: $basic-site;
 
-$promo--txt: $white;
+$promo--txt-mobile: $white;
+$promo--bg-desktop: $special-site;
 
-$program--txt: $black;
 $program--link: $black;
-$program--bg: $light-bright;
 $program--border: $grey-light;
 $program--icon-bg: $basic-site;
 
-$how-it-works--txt: $black;
 $how-it-works--icon-bg: $basic-site;
+$how-it-works--border: $light;
 
-$feedback--txt: $black;
 $feedback--bg: $light-snow;
 $feedback--border: $grey;
-$feedback--toggle: $basic-site;
-$feedback--toggle-bg: $white;
-$feedback--toggle-border: $grey;
 
 $contacts--txt: $dark-night;
-$contacts--bg: $light-bright;
 
-$page-footer--bg: $light-bright;
 $page-footer--border: $grey-light;
 
-$catalog--txt: $black;
 $catalog--txt-alt: $dark-night;
 $catalog--border: $light-snow;
 $catalog--border-alt: $basic-site;
@@ -58,9 +70,9 @@ $catalog--cross: $grey-almost-light;
 
 $product-card--txt: $dark-coal;
 $product-card--border: $light-snow;
+$product-card--border-alt: $grey;
 
 $catalog-promo--txt: $white;
 
-$program-selection--txt: $black;
 $program-selection--border: $light;
 $program-selection--border-alt: $grey-light;

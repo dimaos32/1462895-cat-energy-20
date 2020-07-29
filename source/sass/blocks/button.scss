@@ -1,15 +1,40 @@
 .button {
   display: block;
-  padding: 11px;
-  width: 280px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.25;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: $button--link;
   background-color: $button--bg;
+  border: none;
+
+  &--promo {
+    @media (min-width: $tablet-width) {
+      width: 245px;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
 
   &--show-all {
     color: $button--show-all--link;
     background-color: $button--show-all--bg;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      width: 245px;
+    }
+  }
+
+  &--submit {
+    @media (min-width: $tablet-width) {
+      padding: 13px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
   }
 }

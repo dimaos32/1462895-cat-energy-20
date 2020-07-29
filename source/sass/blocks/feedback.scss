@@ -1,6 +1,36 @@
 .feedback {
-  padding: 30px 20px 25px;
   background-color: $feedback--bg;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, transparent 620px, $feedback--bg 620px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, transparent 205px, $feedback--bg 205px);
+  }
+}
+
+.feedback__container {
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+}
+
+.feedback__description {
+  @media (min-width: $desktop-width) {
+    width: 440px;
+  }
 }
 
 .feedback__title {
@@ -9,12 +39,43 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 1;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: $feedback--txt;
+  font-family: $oswald;
+  color: $page--txt-alt;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+    font-size: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    margin-bottom: 145px;
+  }
 }
 
 .feedback__item {
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 55px;
+  }
+}
+
+.feedback__wrapper {
+  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .feedback__achievements {
@@ -24,6 +85,15 @@
   margin-bottom: 35px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    width: 365px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .feedback__achievement {
@@ -33,11 +103,17 @@
   padding-top: 15px;
   font-size: 24px;
   line-height: 1;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   text-align: center;
-  color: $feedback--txt;
+  color: $page--txt-alt;
   border: 1px solid $feedback--border;
   border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+    min-height: 70px;
+    font-size: 30px;
+  }
 }
 
 .feedback__achievement-result {
@@ -46,26 +122,65 @@
   left: 50%;
   transform: translateX(-50%);
   width: 85px;
-  font-family: "Arial", "Helvetica", sans-serif;
+  padding: 0 10px;
+  font-family: $arial;
   font-size: 12px;
   line-height: 1;
-
   text-transform: lowercase;
   color: $page--txt;
   background-color: $feedback--bg;
+
+  @media (min-width: $tablet-width) {
+    top: 64px;
+    width: max-content;
+    font-size: 14px;
+    background-color: $page--bg;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $feedback--bg;
+  }
 }
 
 .feedback__expenses {
-  margin-bottom: 45px;
-  font-family: "Oswald", "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $oswald;
   text-transform: uppercase;
   text-align: center;
-  color: $feedback--txt;
+  color: $page--txt-alt;
+
+  li:first-of-type {
+    margin-right: 5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    margin: 0;
+    font-size: 20px;
+    text-align: right;
+
+    li:first-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: left;
+
+    li:first-of-type {
+      margin-right: 55px;
+    }
+  }
 }
 
 .feedback__example {
   min-height: 295px;
-  margin: 0 -20px;
 }
 
 .feedback__example-compare {
@@ -77,31 +192,16 @@
 
 .feedback__toggle-value {
   width: 70px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-size: 16px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  color: $feedback--txt;
+  color: $page--txt-alt;
 }
 
 .feedback__toggle-compare {
-  position: relative;
   width: 85px;
   height: 14px;
-  background-color: $feedback--toggle-bg;
-  border: 1px solid $feedback--toggle-border;
-  border-radius: 7px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translateY(-50%);
-    width: 37px;
-    height: 6px;
-    background-color: $feedback--toggle;
-    border-radius: 3px;
-  }
+  background-color: $basic-site;
 }

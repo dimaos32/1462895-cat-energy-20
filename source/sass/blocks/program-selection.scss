@@ -1,24 +1,100 @@
 .program-selection {
   padding: 30px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 80px;
+  }
 }
 
 .program-selection__title {
   margin: 0;
-  padding: 0 20px;
   margin-bottom: 35px;
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: $program-selection--txt;
+  font-family: $oswald;
+  color: $page--txt-alt;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    font-size: 60px;
+  }
 }
 
 .program-selection__annotation {
   margin: 0;
   margin-bottom: 40px;
-  padding: 0 20px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 40px 65px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 65px;
+  }
+}
+
+.program-selection__form-container {
+  @media (max-width: $mobile-width-only) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.program-selection__wrapper {
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.program-selection__decor-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: $catalog--border-alt;
+
+    @media (min-width: $tablet-width) {
+      top: 23px;
+    }
+  }
+}
+
+.program-selection__decor-wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .program-selection__label {
@@ -34,7 +110,7 @@
   }
 
   &--radio:not(:last-of-type) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   &--checkbox:not(:last-of-type) {
@@ -43,6 +119,19 @@
 
   & span {
     flex-shrink: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+
+    &--input:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    &--checkbox:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -55,20 +144,9 @@
   font: inherit;
   color: inherit;
   border: 1px solid $program-selection--border;
-}
 
-.program-selection__wrapper {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: 0;
-    z-index: -1;
-    width: 100%;
-    height: 2px;
-    background-color: $catalog--border-alt;
+  @media (min-width: $tablet-width) {
+    padding: 10px 20px;
   }
 }
 
@@ -79,17 +157,48 @@
   font-size: 24px;
   line-height: 1.1;
   font-family: "Oswald", "Arial", sans-serif;
-  color: $program-selection--txt;
+  color: $page--txt-alt;
   background-color: $page--bg;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+    margin-left: 40px;
+    padding: 0 30px;
+    font-size: 36px;
+    line-height: 1;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    padding: 0 40px;
+  }
 }
 
 .program-selection__cat-about {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 20px 25px;
+  padding: 0;
+  padding-bottom: 25px;
   border: none;
-  border-bottom: 1px solid $program-selection--border-alt;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $program-selection--border-alt;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 40px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-bottom: 0;
+  }
 }
 
 .program-selection__type {
@@ -97,6 +206,16 @@
   padding: 20px;
   border: none;
   border-bottom: 1px solid $program-selection--border-alt;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 40px;
+    padding: 30px;
+    border: 1px solid $program-selection--border;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .program-selection__radio {
@@ -109,8 +228,18 @@
   padding-top: 25px;
   border: none;
 
-  & .program-selection__label {
-    padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+  }
+}
+
+.program-selection__user-personal-container {
+  @media (min-width: $tablet-width) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -119,12 +248,25 @@
   padding: 0;
   padding-top: 25px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+  }
+}
+
+.program-selection__comment-container {
+  @media (min-width: $tablet-width) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .program-selection__comment-field {
   display: block;
-  width: calc(100% - 40px);
-  margin: 0 20px;
+  width: 100%;
   padding: 15px;
   font-size: 16px;
   line-height: 1.1;
@@ -133,15 +275,35 @@
   color: inherit;
   border: 1px solid $program-selection--border;
   resize: vertical;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
-.program-additional {
+.program-selection__additional {
   margin: 0;
   padding: 30px 0 40px;
   border: none;
 
-  & .program-selection__label {
-    padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    padding: 65px 0 55px;
+  }
+}
+
+.program-selection__additional-container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+    margin: 0;
   }
 }
 
@@ -149,9 +311,23 @@
   margin-right: 15px;
 }
 
-.program-selection__button {
-  margin: 0 auto 20px;
-  border: none;
+.program-selection__bottom-controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px 80px;
+    margin: 0;
+  }
 }
 
 .program-selection__footnote {
@@ -159,5 +335,11 @@
   font-size: 14px;
   line-height: 1.1;
   text-align: center;
-  color: $program-selection--txt;
+  color: $page--txt-alt;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1;
+    text-align-last: left;
+  }
 }
