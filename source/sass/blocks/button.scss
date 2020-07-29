@@ -8,6 +8,7 @@
   text-align: center;
   color: $button--link;
   background-color: $button--bg;
+  border: none;
 
   &--promo {
     @media (min-width: $tablet-width) {
@@ -26,9 +27,14 @@
   &--catalog {
     @media (min-width: $tablet-width) {
       width: 245px;
-      padding: 10px;
-      font-size: 16px;
-      line-height: 1.25;
+    }
+  }
+
+  &--submit {
+    @media (min-width: $tablet-width) {
+      padding: 13px;
+      font-size: 20px;
+      line-height: 1.3;
     }
   }
 }

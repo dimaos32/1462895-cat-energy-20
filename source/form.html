@@ -69,7 +69,7 @@
       <fieldset class="program-selection__type">
         <div class="program-selection__wrapper">
           <label class="program-selection__label program-selection__label--radio">
-            <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim">
+            <input class="program-selection__radio" type="radio" name="program-selection__type" value="slim" checked>
             Похудение
           </label>
           <label class="program-selection__label program-selection__label--radio">
@@ -122,35 +122,46 @@
       </div>
     </fieldset>
 
-    <fieldset class="program-additional">
-      <div class="program-selection__wrapper">
-        <legend class="program-selection__legend">
-          Дополнительно
-        </legend>
+    <fieldset class="program-selection__additional">
+      <div class="program-selection__decor-container">
+        <div class="program-selection__decor-wrapper">
+          <legend class="program-selection__legend">
+            Дополнительно
+          </legend>
+        </div>
       </div>
-      <label class="program-selection__label program-selection__label--checkbox">
-        <input class="program-selection__checkbox" type="checkbox" name="sweetener">
-        Сахарозаменитель
-      </label>
-      <label class="program-selection__label program-selection__label--checkbox">
-        <input class="program-selection__checkbox" type="checkbox" name="water">
-        Питьевая вода
-      </label>
-      <label class="program-selection__label program-selection__label--checkbox">
-        <input class="program-selection__checkbox" type="checkbox" name="milk">
-        Молоко
-      </label>
-      <label class="program-selection__label program-selection__label--checkbox">
-        <input class="program-selection__checkbox" type="checkbox" name="витамины">
-        Витамины
-      </label>
+      <div class="container">
+        <div class="program-selection__additional-container">
+          <label class="program-selection__label program-selection__label--checkbox">
+            <input class="program-selection__checkbox" type="checkbox" name="sweetener" checked>
+            Сахарозаменитель
+          </label>
+          <label class="program-selection__label program-selection__label--checkbox">
+            <input class="program-selection__checkbox" type="checkbox" name="water">
+            Питьевая вода
+          </label>
+          <label class="program-selection__label program-selection__label--checkbox">
+            <input class="program-selection__checkbox" type="checkbox" name="milk">
+            Молоко
+          </label>
+          <label class="program-selection__label program-selection__label--checkbox">
+            <input class="program-selection__checkbox" type="checkbox" name="витамины">
+            Витамины
+          </label>
+        </div>
+      </div>
     </fieldset>
 
-    <button class="program-selection__button button" type="submit">отправить заявку</button>
-
-    <small class="program-selection__footnote">
-      * — Обязательные поля
-    </small>
+    <div class="container">
+      <div class="program-selection__bottom-controls">
+        <button class="button button--submit" type="submit">
+          отправить заявку
+        </button>
+        <small class="program-selection__footnote">
+          * — Обязательные поля
+        </small>
+      </div>
+    </div>
   </form>
 </section>
 
