@@ -28,7 +28,7 @@
 .program-selection__annotation {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -102,7 +102,7 @@
   align-items: center;
   font-size: 16px;
   line-height: 1.1;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   text-transform: uppercase;
 
   &--input:not(:last-of-type) {
@@ -156,7 +156,7 @@
   padding: 0 20px;
   font-size: 24px;
   line-height: 1.1;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   color: $page--txt-alt;
   background-color: $page--bg;
 
@@ -224,12 +224,12 @@
 
 .program-selection__user-personal {
   margin: 0;
+  margin-top: 25px;
   padding: 0;
-  padding-top: 25px;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
+    margin-top: 70px;
   }
 }
 
@@ -245,12 +245,12 @@
 
 .program-selection__comment {
   margin: 0;
+  margin-top: 25px;
   padding: 0;
-  padding-top: 25px;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
+    margin-top: 70px;
   }
 }
 
@@ -270,7 +270,7 @@
   padding: 15px;
   font-size: 16px;
   line-height: 1.1;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   text-transform: uppercase;
   color: inherit;
   border: 1px solid $program-selection--border;
@@ -284,11 +284,14 @@
 
 .program-selection__additional {
   margin: 0;
-  padding: 30px 0 40px;
+  margin-top: 30px;
+  padding: 0;
+  padding-bottom: 40px;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 55px;
+    margin-top: 65px;
+    padding-bottom: 55px;
   }
 }
 
