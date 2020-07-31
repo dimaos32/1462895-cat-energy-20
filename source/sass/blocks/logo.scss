@@ -1,7 +1,19 @@
 .logo {
   display: block;
+  outline: none;
 
   img {
     display: block;
+  }
+
+  &[href] {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
