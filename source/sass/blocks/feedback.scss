@@ -191,17 +191,16 @@
 }
 
 .feedback__toggle-value {
-  width: 70px;
   font-family: $oswald;
   font-size: 16px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: $page--txt-alt;
-}
 
-.feedback__toggle-compare {
-  width: 85px;
-  height: 14px;
-  background-color: $basic-site;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    border-bottom: 1px dotted rgba($page--txt-alt, 0.4);
+  }
 }

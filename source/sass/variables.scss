@@ -14,6 +14,8 @@ $black: #000000;
 $white: #ffffff;
 
 $basic-site: #68b738;
+$basic-site-dim: #5eaa2f;
+
 $special-site: #64a83b;
 
 // Fonts
@@ -33,8 +35,10 @@ $mobile-width-only: 767px;
 
 $button--link: $white;
 $button--bg: $basic-site;
+$button--bg-hover: $basic-site-dim;
 $button--show-all--link: $dark-dim;
 $button--show-all--bg: $light-bright;
+$button--show-all--bg-hover: $light-snow;
 
 
 $page--txt: $dark-dim;
@@ -60,6 +64,14 @@ $how-it-works--border: $light;
 
 $feedback--bg: $light-snow;
 $feedback--border: $grey;
+
+$range-compare--bg: $grey-light;
+$range-compare--bg-mobile: $white;
+$range-compare--border: $grey;
+$range-compare--border-active: $basic-site;
+$range-compare--toggle: $basic-site;
+$range-compare--toggle-secondary: $white;
+$range-compare--shadow: $black;
 
 $contacts--txt: $dark-night;
 
