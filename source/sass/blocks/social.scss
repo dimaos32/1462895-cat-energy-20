@@ -11,4 +11,47 @@
 .social__link {
   display: block;
   margin: 20px;
+  outline: none;
+
+  .social__line {
+    fill: $social--color;
+  }
+
+  &:hover,
+  &:focus {
+    .social__line {
+      fill: $social--color-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vkontakte {
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 29px;
+        height: 17px;
+      }
+    }
+  }
+
+  &--instagram {
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  &--facebook {
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 13px;
+        height: 77px;
+      }
+    }
+  }
 }

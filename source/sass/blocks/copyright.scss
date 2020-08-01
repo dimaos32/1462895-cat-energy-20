@@ -12,6 +12,22 @@
 
 .copyright__link {
   display: block;
+  outline: none;
+
+  .copyright__line {
+    fill: $social--color;
+  }
+
+  &:hover,
+  &:focus {
+    .copyright__line {
+      fill: $social--color-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   svg {
     display: block;
