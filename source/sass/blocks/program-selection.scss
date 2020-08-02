@@ -192,6 +192,10 @@
     &:hover::before {
       border-color: $form--radio-hover;
     }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &:checked {
@@ -354,8 +358,18 @@
   font-family: $oswald;
   text-transform: uppercase;
   color: inherit;
-  border: 1px solid $program-selection--border;
+  border: 1px solid $form--input;
+  outline: none;
   resize: vertical;
+
+  &:hover {
+    border: 1px solid $form--input-hover;
+  }
+
+  &:focus {
+    border: 2px solid $form--input-focus;
+    padding: 14px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -373,6 +387,71 @@
   @media (min-width: $tablet-width) {
     margin-top: 65px;
     padding-bottom: 55px;
+  }
+}
+
+.program-selection__checkbox {
+  & + .program-selection__label-description {
+    position: relative;
+    padding-left: 45px;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $form--radio;
+    }
+
+    &:hover::before {
+      border-color: $form--radio-hover;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:checked {
+    & + .program-selection__label-description {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 18px;
+        height: 14px;
+        background: url("../../img/icon-tick.svg") no-repeat;
+      }
+    }
+
+    &:focus + .program-selection__label-description::before {
+      border-color: $form--radio-hover;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & + .program-selection__label-description {
+      padding-left: 60px;
+
+      &::before {
+        top: -5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:checked + .program-selection__label-description {
+      &::after {
+        top: 8px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }
 
