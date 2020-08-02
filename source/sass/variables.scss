@@ -4,6 +4,7 @@ $dark-night: #111111;
 $dark-coal: #222222;
 $dark-dim: #444444;
 $grey-dark: #666666;
+$grey-almost-dark: #bababa;
 $grey: #cdcdcd;
 $grey-almost-light: #d3d3d3;
 $grey-light: #d9d9d9;
@@ -18,6 +19,8 @@ $basic-site: #68b738;
 $basic-site-dim: #5eaa2f;
 
 $special-site: #64a83b;
+
+$error-site: #ff8282;
 
 // Fonts
 
@@ -94,3 +97,11 @@ $catalog-promo--txt: $white;
 
 $program-selection--border: $light;
 $program-selection--border-alt: $grey-light;
+
+$form--input: $light;
+$form--input-hover: $grey;
+$form--input-focus: $dark-dim;
+$form--input-error: $error-site;
+
+$form--radio: $grey;
+$form--radio-hover: $grey-almost-dark;
