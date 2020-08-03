@@ -105,8 +105,12 @@
   font-family: $oswald;
   text-transform: uppercase;
 
-  &--input:not(:last-of-type) {
-    margin-bottom: 12px;
+  &--input {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
   }
 
   &--radio {
@@ -181,6 +185,32 @@
   }
 }
 
+.program-selection__icon {
+  position: absolute;
+  right: 15px;
+
+  path {
+    fill: $form--icon;
+  }
+
+  .program-selection__input:focus + & {
+    path {
+      fill: $form--icon-active;
+    }
+  }
+
+  .program-selection__input--error + & {
+    path {
+      fill: $form--icon-error;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 20px;
+  }
+}
+
+
 .program-selection__radio {
   & + .program-selection__label-description {
     position: relative;
@@ -239,7 +269,7 @@
 
     &:checked + .program-selection__label-description {
       &::after {
-        top: 5px;
+        top: 6px;
         left: 11px;
         width: 18px;
         height: 18px;
@@ -333,7 +363,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
     margin: 0;
+
+    .program-selection__label--input:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
