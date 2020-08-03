@@ -167,6 +167,15 @@
     }
   }
 
+  &--error {
+    border: 2px solid $form--input-error;
+    padding: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding: 9px 19px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 10px 20px;
   }
