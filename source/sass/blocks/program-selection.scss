@@ -105,12 +105,18 @@
   font-family: $oswald;
   text-transform: uppercase;
 
-  &--input:not(:last-of-type) {
-    margin-bottom: 12px;
+  &--input {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
   }
 
-  &--radio:not(:last-of-type) {
-    margin-bottom: 22px;
+  &--radio {
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
   }
 
   &--checkbox:not(:last-of-type) {
@@ -129,6 +135,12 @@
       margin-bottom: 20px;
     }
 
+    &--radio {
+      &:not(:last-of-type) {
+        margin-bottom: 22px;
+      }
+    }
+
     &--checkbox:not(:last-of-type) {
       margin-bottom: 0;
     }
@@ -143,10 +155,126 @@
   padding: 15px;
   font: inherit;
   color: inherit;
-  border: 1px solid $program-selection--border;
+  border: 1px solid $form--input;
+  outline: none;
+
+  &:hover {
+    border: 1px solid $form--input-hover;
+  }
+
+  &:focus {
+    border: 2px solid $form--input-focus;
+    padding: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding: 9px 19px;
+    }
+  }
+
+  &--error {
+    border: 2px solid $form--input-error;
+    padding: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding: 9px 19px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding: 10px 20px;
+  }
+}
+
+.program-selection__icon {
+  position: absolute;
+  right: 15px;
+
+  path {
+    fill: $form--icon;
+  }
+
+  .program-selection__input:focus + & {
+    path {
+      fill: $form--icon-active;
+    }
+  }
+
+  .program-selection__input--error + & {
+    path {
+      fill: $form--icon-error;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 20px;
+  }
+}
+
+
+.program-selection__radio {
+  & + .program-selection__label-description {
+    position: relative;
+    padding-left: 45px;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $form--radio;
+      border-radius: 50%;
+    }
+
+    &:hover::before {
+      border-color: $form--radio-hover;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:checked {
+    & + .program-selection__label-description {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 8px;
+        width: 14px;
+        height: 14px;
+        background-color: $basic-site;
+        border-radius: 50%;
+      }
+    }
+
+    &:focus + .program-selection__label-description::before {
+      border-color: $form--radio-hover;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & + .program-selection__label-description {
+      padding-left: 60px;
+
+      &::before {
+        top: -5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:checked + .program-selection__label-description {
+      &::after {
+        top: 6px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }
 
@@ -203,7 +331,7 @@
 
 .program-selection__type {
   margin: 0;
-  padding: 20px;
+  padding: 25px 20px;
   border: none;
   border-bottom: 1px solid $program-selection--border-alt;
 
@@ -216,10 +344,6 @@
   @media (min-width: $desktop-width) {
     margin: 0;
   }
-}
-
-.program-selection__radio {
-  margin-right: 15px;
 }
 
 .program-selection__user-personal {
@@ -239,7 +363,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
     margin: 0;
+
+    .program-selection__label--input:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -273,8 +404,18 @@
   font-family: $oswald;
   text-transform: uppercase;
   color: inherit;
-  border: 1px solid $program-selection--border;
+  border: 1px solid $form--input;
+  outline: none;
   resize: vertical;
+
+  &:hover {
+    border: 1px solid $form--input-hover;
+  }
+
+  &:focus {
+    border: 2px solid $form--input-focus;
+    padding: 14px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -295,6 +436,71 @@
   }
 }
 
+.program-selection__checkbox {
+  & + .program-selection__label-description {
+    position: relative;
+    padding-left: 45px;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $form--radio;
+    }
+
+    &:hover::before {
+      border-color: $form--radio-hover;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:checked {
+    & + .program-selection__label-description {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 18px;
+        height: 14px;
+        background: url("../img/icon-tick.svg") no-repeat;
+      }
+    }
+
+    &:focus + .program-selection__label-description::before {
+      border-color: $form--radio-hover;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & + .program-selection__label-description {
+      padding-left: 60px;
+
+      &::before {
+        top: -5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:checked + .program-selection__label-description {
+      &::after {
+        top: 8px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
 .program-selection__additional-container {
   @media (min-width: $tablet-width) {
     display: grid;
@@ -308,10 +514,6 @@
     gap: 40px 80px;
     margin: 0;
   }
-}
-
-.program-selection__checkbox {
-  margin-right: 15px;
 }
 
 .program-selection__bottom-controls {

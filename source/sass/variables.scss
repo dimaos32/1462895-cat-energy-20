@@ -3,6 +3,8 @@
 $dark-night: #111111;
 $dark-coal: #222222;
 $dark-dim: #444444;
+$grey-dark: #666666;
+$grey-almost-dark: #bababa;
 $grey: #cdcdcd;
 $grey-almost-light: #d3d3d3;
 $grey-light: #d9d9d9;
@@ -14,7 +16,11 @@ $black: #000000;
 $white: #ffffff;
 
 $basic-site: #68b738;
+$basic-site-dim: #5eaa2f;
+
 $special-site: #64a83b;
+
+$error-site: #ff8282;
 
 // Fonts
 
@@ -33,14 +39,18 @@ $mobile-width-only: 767px;
 
 $button--link: $white;
 $button--bg: $basic-site;
+$button--bg-hover: $basic-site-dim;
 $button--show-all--link: $dark-dim;
 $button--show-all--bg: $light-bright;
+$button--show-all--bg-hover: $light-snow;
 
 
 $page--txt: $dark-dim;
 $page--txt-alt: $black;
 $page--bg: $white;
 $page--bg-alt: $light-bright;
+
+$main-nav--btn: $black;
 
 $site-list--txt-desktop: $white;
 $site-list--border-mobile: $light;
@@ -59,9 +69,20 @@ $how-it-works--border: $light;
 $feedback--bg: $light-snow;
 $feedback--border: $grey;
 
+$range-compare--bg: $grey-light;
+$range-compare--bg-mobile: $white;
+$range-compare--border: $grey;
+$range-compare--border-active: $basic-site;
+$range-compare--toggle: $basic-site;
+$range-compare--toggle-secondary: $white;
+$range-compare--shadow: $black;
+
 $contacts--txt: $dark-night;
 
 $page-footer--border: $grey-light;
+
+$social--color: $grey-dark;
+$social--color-hover: $basic-site;
 
 $catalog--txt-alt: $dark-night;
 $catalog--border: $light-snow;
@@ -76,3 +97,15 @@ $catalog-promo--txt: $white;
 
 $program-selection--border: $light;
 $program-selection--border-alt: $grey-light;
+
+$form--input: $light;
+$form--input-hover: $grey;
+$form--input-focus: $dark-dim;
+$form--input-error: $error-site;
+
+$form--icon: $dark-coal;
+$form--icon-active: $basic-site;
+$form--icon-error: $error-site;
+
+$form--radio: $grey;
+$form--radio-hover: $grey-almost-dark;

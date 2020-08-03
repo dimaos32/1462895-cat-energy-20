@@ -9,6 +9,16 @@
   color: $button--link;
   background-color: $button--bg;
   border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $button--bg-hover;
+  }
+
+  &:active {
+    color: rgba($button--link, 0.3);
+  }
 
   &--promo {
     @media (min-width: $tablet-width) {
@@ -22,6 +32,15 @@
   &--show-all {
     color: $button--show-all--link;
     background-color: $button--show-all--bg;
+
+    &:hover,
+    &:focus {
+      background-color: $button--show-all--bg-hover;
+    }
+
+    &:active {
+      color: rgba($button--show-all--link, 0.3);
+    }
   }
 
   &--catalog {

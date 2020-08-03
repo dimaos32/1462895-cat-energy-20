@@ -36,10 +36,10 @@
   font-size: 36px;
   line-height: 1;
   font-family: $oswald;
-  text-align: center;
   color: $page--txt-alt;
 
   @media (max-width: $mobile-width-only) {
+    width: 280px;
     border-bottom: 1px solid $catalog--border;
   }
 
