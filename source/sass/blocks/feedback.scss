@@ -181,6 +181,24 @@
 
 .feedback__example {
   min-height: 295px;
+  text-align: center;
+
+  @media (min-width: $mobile-width-only) {
+    margin: 0 -20px;
+  }
+}
+
+.feedback__photo {
+  width: 320px;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 690px;
+  }
+
+  &--after {
+    display: none;
+  }
 }
 
 .feedback__example-compare {

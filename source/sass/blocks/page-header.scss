@@ -37,13 +37,5 @@
       margin: 0 auto;
       transform: translateX(-44px);
     }
-
-    @media (min-width: $tablet-width) {
-      height: 52px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 59px;
-    }
   }
 }
