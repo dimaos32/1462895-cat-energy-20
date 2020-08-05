@@ -207,18 +207,3 @@
   align-items: center;
   margin-top: 25px;
 }
-
-.feedback__toggle-value {
-  font-family: $oswald;
-  font-size: 16px;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  color: $page--txt-alt;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 1.5;
-    border-bottom: 1px dotted rgba($page--txt-alt, 0.4);
-  }
-}
