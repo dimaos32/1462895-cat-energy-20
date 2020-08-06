@@ -67,5 +67,14 @@
   display: block;
   min-height: 400px;
   margin: 0 auto;
+  object-fit: cover;
   background-color: $page--bg-alt;
+
+  @media (min-width: $tablet-width) {
+    width: 767px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }
