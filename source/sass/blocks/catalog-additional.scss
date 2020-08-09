@@ -76,9 +76,9 @@
     font-size: 36px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
     padding: 75px 40px 80px;
-    font-size: 36px;
   }
 }
 
