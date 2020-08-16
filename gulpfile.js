@@ -36,12 +36,13 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
     ui: false,
   });
+  gulp.watch("source/*.html").on("change", sync.reload);
   done();
 }
 
@@ -87,7 +88,6 @@ exports.sprite = sprite;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/*.html",
     "source/img/**",
     "source/js/**",
     "source/*.ico"
@@ -99,6 +99,15 @@ const copy = () => {
 
 exports.copy = copy;
 
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"));
+};
+
+exports.html = html;
+
 // Clean
 
 const clean = () => {
@@ -109,12 +118,13 @@ exports.clean = clean;
 
 // Build
 
-const build = () => gulp.series(
+const build = (done) => gulp.series(
   "clean",
   "copy",
   "styles",
-  "sprite"
-);
+  "sprite",
+  "html"
+)(done);
 
 exports.build = build;
 
@@ -122,7 +132,7 @@ exports.build = build;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 };
 
 exports.default = gulp.series(
