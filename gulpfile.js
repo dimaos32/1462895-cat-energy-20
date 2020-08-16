@@ -10,6 +10,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const del = require("del");
 
 // Styles
 
@@ -97,6 +98,14 @@ const copy = () => {
 };
 
 exports.copy = copy;
+
+// Clean
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
 
 // Watcher
 
