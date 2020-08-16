@@ -81,6 +81,23 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/*.html",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+    ], {
+    base: "source"
+    })
+    .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
 // Watcher
 
 const watcher = () => {
