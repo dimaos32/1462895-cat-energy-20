@@ -25,7 +25,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -56,7 +56,7 @@ const images = () => {
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("source/img"));
 }
 
 exports.images = images;
@@ -66,7 +66,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("source/img"));
 }
 
 exports.webp = createWebp;
@@ -77,7 +77,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -107,13 +107,24 @@ const clean = () => {
 
 exports.clean = clean;
 
+// Build
+
+const build = () => gulp.series(
+  "clean",
+  "copy",
+  "styles",
+  "sprite"
+);
+
+exports.build = build;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
-}
+};
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
