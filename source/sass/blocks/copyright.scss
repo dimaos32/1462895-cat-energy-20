@@ -1,35 +1,27 @@
-.copyright {
+
+.copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.copyright__text {
-  margin: 0;
   font-size: 16px;
   line-height: 1.1;
-}
+  color: $page--txt;
 
-.copyright__link {
-  display: block;
-  outline: none;
-
-  .copyright__line {
+  .copyright__icon {
+    margin-left: 16px;
+    margin-right: -6px;
+    flex-shrink: 0;
     fill: $social--color;
   }
 
   &:hover,
   &:focus {
-    .copyright__line {
+    .copyright__icon {
       fill: $social--color-hover;
     }
   }
 
   &:active {
     opacity: 0.3;
-  }
-
-  svg {
-    display: block;
   }
 }
