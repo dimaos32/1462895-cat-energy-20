@@ -5,6 +5,13 @@
   &--index-page {
     background-color: transparent;
   }
+
+  iframe {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border: none;
+  }
 }
 
 .contacts__container {
@@ -21,6 +28,7 @@
     position: absolute;
     width: 570px;
     top: 95px;
+    z-index: 5;
     left: calc(50% - 610px);
     background-color: $page--bg;
   }
