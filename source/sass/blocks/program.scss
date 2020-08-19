@@ -168,9 +168,7 @@
 }
 
 .program__link {
-  position: relative;
   display: block;
-  width: max-content;
   margin-top: 20px;
   font-size: 16px;
   line-height: 1;
@@ -179,19 +177,19 @@
   color: $program--link;
   outline: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: -47px;
+  span {
+    display: inline-block;
     width: 32px;
-    height: 10px;
-    background: url("../img/icon-right-arrow-long.svg") left top no-repeat;
+    height: 1em;
+    margin-left: 15px;
+    background: url("../img/icon-right-arrow-long.svg") left center no-repeat;
   }
 
-  &:hover::before,
-  &:focus::before {
-    background: url("../img/icon-right-arrow-verylong.svg") left top no-repeat;
+  &:hover,
+  &:focus {
+    span {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
   }
 
   &:active {
@@ -200,11 +198,11 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
+    padding-right: 49px;
     font-size: 20px;
 
-    &::before {
-      top: 5px;
-      right: -57px;
+    span {
+      margin-left: 20px;
     }
   }
 
