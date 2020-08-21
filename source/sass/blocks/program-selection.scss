@@ -194,15 +194,11 @@
   }
 
   .program-selection__input:focus + & {
-    path {
-      fill: $form--icon-active;
-    }
+    fill: $form--icon-active;
   }
 
   .program-selection__input--error + & {
-    path {
-      fill: $form--icon-error;
-    }
+    fill: $form--icon-error;
   }
 
   @media (min-width: $tablet-width) {
