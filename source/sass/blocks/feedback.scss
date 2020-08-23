@@ -2,11 +2,12 @@
   background-color: $feedback--bg;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, transparent 620px, $feedback--bg 620px);
+    margin-top: 620px;
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to bottom, transparent 205px, $feedback--bg 205px);
+    margin-top: 205px;
+    background: linear-gradient(to right, $feedback--bg-desktop calc(50% + 610px), $feedback--bg calc(50% + 610px));
   }
 }
 
@@ -23,13 +24,19 @@
     display: flex;
     justify-content: space-between;
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 0;
   }
 }
 
 .feedback__description {
+  @media (min-width: $tablet-width) {
+    margin-top: -620px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 440px;
+    margin-top: -205px;
+    padding-bottom: 70px;
   }
 }
 
@@ -180,24 +187,61 @@
 }
 
 .feedback__example {
+  position: relative;
   min-height: 295px;
   text-align: center;
 
-  @media (min-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     margin: 0 -20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 690px;
+    margin-top: -205px;
+    padding-bottom: 70px;
+  }
+}
+
+.feedback__example-after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+  .feedback__photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $feedback--bg;
+
+    @media (min-width: $tablet-width) {
+      right: 9px;
+      background: linear-gradient(to bottom, $page--bg 161px, $feedback--bg 161px);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 0;
+      background: linear-gradient(to bottom, $page--bg 205px, $feedback--bg 205px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $feedback--bg;
   }
 }
 
 .feedback__photo {
+  display: block;
   width: 320px;
+  max-width: 320px;
   height: auto;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 690px;
-  }
-
-  &--after {
-    display: none;
+    min-width: 690px;
   }
 }
 

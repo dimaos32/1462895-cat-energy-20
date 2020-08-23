@@ -1,4 +1,6 @@
 .range-compare {
+  position: relative;
+  z-index: 1;
   width: 428px;
   height: 6px;
   margin: 0 20px;
@@ -30,6 +32,7 @@
 
 .range-compare__toggle {
   content: "";
+  cursor: pointer;
   position: absolute;
   top: -14px;
   left: 50%;

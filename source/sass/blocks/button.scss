@@ -1,5 +1,6 @@
 .button {
   display: block;
+  cursor: pointer;
   padding: 10px;
   font-size: 16px;
   line-height: 1.25;
@@ -58,6 +59,8 @@
   }
 
   &--toggle-control {
+    position: relative;
+    z-index: 1;
     line-height: 1;
     color: $page--txt-alt;
     background-color: transparent;
