@@ -12,13 +12,21 @@
   border: none;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $button--bg-hover;
+  }
+
+  &:focus {
+    color: $button--bg;
+    background-color: $page--bg;
+    outline: 2px solid $button--bg;
+    outline-offset: -2px;
   }
 
   &:active {
     color: rgba($button--link, 0.3);
+    background-color: $button--bg;
+    outline: none;
   }
 
   &--promo {
@@ -64,11 +72,17 @@
     line-height: 1;
     color: $page--txt-alt;
     background-color: transparent;
+    outline: none;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: rgba($page--txt-alt, 0.6);
       background-color: transparent;
+    }
+
+    &:focus {
+      color: $page--focus;
+      background-color: transparent;
+      outline: none;
     }
 
     &:active {

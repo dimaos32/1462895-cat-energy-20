@@ -191,6 +191,10 @@
     background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
+  &:focus {
+    color: $page--focus;
+  }
+
   &:active {
     opacity: 0.3;
   }
