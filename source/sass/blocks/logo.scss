@@ -12,13 +12,16 @@
   }
 
   &[href] {
-    &:hover,
-    &:focus {
+    &:hover {
       opacity: 0.8;
     }
 
     &:active {
       opacity: 0.6;
     }
+  }
+
+  &:focus {
+    filter: drop-shadow(0px 0px 4px $page--focus);
   }
 }

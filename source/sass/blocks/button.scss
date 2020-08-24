@@ -42,8 +42,7 @@
     color: $button--show-all--link;
     background-color: $button--show-all--bg;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $button--show-all--bg-hover;
     }
 

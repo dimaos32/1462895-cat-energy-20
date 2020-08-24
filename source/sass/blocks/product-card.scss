@@ -66,6 +66,26 @@
 }
 
 .product-card__link {
+  display: block;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus .product-card__title{
+    color: $page--focus;
+
+    &--not-product::before,
+    &--not-product::after {
+      background-color: $page--focus;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   &--img {
     order: -1;
     flex-shrink: 0;
