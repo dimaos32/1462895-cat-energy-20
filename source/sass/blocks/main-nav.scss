@@ -78,14 +78,13 @@
     display: none;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.6;
   }
 
-  &:focus {
-    outline: 2px solid $page--focus;
-    outline-offset: -6px;
+  &:focus::before,
+  &:focus::after {
+    background-color: $page--focus;
   }
 
   &:active {
