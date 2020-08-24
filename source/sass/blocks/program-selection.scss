@@ -248,7 +248,7 @@
     }
 
     &:focus + .program-selection__label-description::before {
-      border-color: $form--radio-hover;
+      border: 2px solid $form--radio-focus;
     }
   }
 
@@ -457,6 +457,10 @@
     }
   }
 
+  &:focus + .program-selection__label-description::before {
+    border: 2px solid $form--radio-focus;
+  }
+
   &:checked {
     & + .program-selection__label-description {
       &::after {
@@ -468,10 +472,6 @@
         height: 14px;
         background: url("../img/icon-tick.svg") no-repeat;
       }
-    }
-
-    &:focus + .program-selection__label-description::before {
-      border-color: $form--radio-hover;
     }
   }
 
