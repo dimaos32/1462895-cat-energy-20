@@ -78,9 +78,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding: 0 8px;
     margin-bottom: 40px;
     width: 500px;
     font-size: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -90,7 +95,12 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding: 0 8px;
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
