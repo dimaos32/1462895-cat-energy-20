@@ -58,6 +58,10 @@
   }
 
   &--catalog-additional {
+    @media (min-width: $tablet-width) {
+      padding: 9px;
+    }
+
     @media (min-width: $desktop-width) {
       width: 245px;
     }

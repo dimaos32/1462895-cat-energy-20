@@ -1,14 +1,10 @@
 .product-card {
   width: 320px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   padding-top: 0;
   padding-bottom: 25px;
   background: 20px 5px no-repeat;
-
-  &--not-product {
-    padding-top: 60px;
-  }
 
   &--alternative {
     width: auto;
@@ -23,9 +19,11 @@
     justify-content: space-between;
     width: auto;
     min-height: 510px;
+    padding-bottom: 40px;
     background: linear-gradient(to bottom, transparent 80px, $page--bg-alt 80px);
 
     &--not-product {
+      padding-top: 60px;
       background: transparent;
     }
 
@@ -42,9 +40,20 @@
     &--alternative {
       flex-direction: row;
       align-items: center;
-      padding: 15px 0 16px;
+      padding: 17px 0 16px;
       border-right: none;
       border-left: none;
+    }
+  }
+
+  &--not-product {
+    padding-top: 60px;
+
+    @media (min-width: $tablet-width) {
+      min-height: 430px;
+      margin-top: 80px;
+      outline: 2px solid $page--bg-alt;
+      outline-offset: -2px;
     }
   }
 }
@@ -62,6 +71,10 @@
   @media (min-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: space-between;
   }
 }
 
@@ -94,8 +107,7 @@
       display: flex;
       align-items: flex-end;
       height: 208px;
-      margin: 0 -20px;
-      margin-bottom: 25px;
+      margin: 0 -20px 30px;
     }
 
     @media (min-width: $desktop-width) {
@@ -159,7 +171,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
     width: 150px;
     font-size: 20px;
     line-height: 1.2;
@@ -167,6 +179,7 @@
 
     &--not-product {
       margin-top: 100px;
+      margin-bottom: 25px;
     }
 
     &--not-product::before,
@@ -181,18 +194,25 @@
 
     &--alternative {
       width: auto;
-      margin-left: 0;
+      margin: 0 auto 25px 0;
       font-size: 20px;
       line-height: 1;
     }
   }
 
   @media (min-width: $desktop-width) {
+    line-height: 1.05;
+
     &--alternative {
       width: 325px;
       margin: 0;
       text-align: left;
     }
+  }
+
+  &--alternative {
+    width: auto;
+    margin: 0;
   }
 }
 
@@ -238,6 +258,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+
     &--alternative {
       width: 325px;
       margin: 0;
@@ -259,6 +281,10 @@
     font-size: 16px;
     line-height: 1;
     border-bottom: 1px solid $product-card--border-alt;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 0;
   }
 }
 

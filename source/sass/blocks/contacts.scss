@@ -31,6 +31,8 @@
     width: 570px;
     top: 95px;
     z-index: 5;
+    padding-left: 75px;
+    padding-right: 90px;
     left: calc(50% - 610px);
     background-color: $page--bg;
   }
@@ -70,6 +72,12 @@
 
   p {
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    p {
+      text-align-last: left;
+    }
   }
 }
 
