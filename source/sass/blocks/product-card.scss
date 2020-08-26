@@ -13,7 +13,7 @@
   &--alternative {
     width: auto;
     margin: 0;
-    padding: 10px 0 20px;
+    padding: 10px 0 15px;
     border-bottom: 1px solid $product-card--border-alt;
   }
 
@@ -120,7 +120,7 @@
 
 .product-card__title {
   width: 100px;
-  margin: 20px 0;
+  margin: 20px 0 15px;
   font-family: $oswald;
   font-weight: normal;
   font-size: 16px;

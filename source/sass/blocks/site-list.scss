@@ -16,9 +16,9 @@
     margin: 0 -20px;
     border-top: 1px solid $site-list--border-mobile;
 
-    &:last-of-type {
-      border-bottom: 1px solid $site-list--border-mobile;
-    }
+    // &:last-of-type {
+    //   border-bottom: 1px solid $site-list--border-mobile;
+    // }
   }
 
   @media (min-width: $tablet-width) {

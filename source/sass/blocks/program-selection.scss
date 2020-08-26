@@ -1,6 +1,10 @@
 .program-selection {
   padding: 30px 0;
 
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $site-list--border-mobile;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 50px 0 70px;
   }
