@@ -52,6 +52,7 @@
 
   &[href] {
     &:hover {
+      color: $page--txt-alt;
       opacity: 0.6;
     }
 

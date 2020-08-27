@@ -12,10 +12,6 @@
   border: none;
   outline: none;
 
-  &:hover {
-    background-color: $button--bg-hover;
-  }
-
   &:focus {
     color: $button--bg;
     background-color: $page--bg;
@@ -23,9 +19,14 @@
     outline-offset: -2px;
   }
 
+  &:hover {
+    color: $button--link;
+    background-color: $button--bg-hover;
+    outline: none;
+  }
+
   &:active {
     color: rgba($button--link, 0.3);
-    background-color: $button--bg;
     outline: none;
   }
 
@@ -86,7 +87,7 @@
     outline: none;
 
     &:hover {
-      color: rgba($page--txt-alt, 0.6);
+      color: $page--txt-alt;
       background-color: transparent;
     }
 
@@ -97,13 +98,21 @@
     }
 
     &:active {
-      color: rgba($page--txt-alt, 0.3);
+      color: $page--txt-alt;
     }
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 1.5;
       border-bottom: 1px dotted rgba($page--txt-alt, 0.4);
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+
+      &:active {
+        border: none;
+      }
     }
   }
 }
