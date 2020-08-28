@@ -20,6 +20,12 @@
         0 8px 0 0 $main-nav--btn,
         0 -8px 0 0 $main-nav--btn;
     }
+
+    .main-nav__toggle:focus::before {
+      box-shadow:
+        0 8px 0 0 $page--focus,
+        0 -8px 0 0 $page--focus;
+    }
   }
 
   &--opened {
@@ -50,8 +56,10 @@
   }
 
   &--nojs {
-    .main-nav__list {
-      display: block;
+    @media (max-width: $mobile-width-only) {
+      .main-nav__list {
+        display: block;
+      }
     }
 
     .main-nav__toggle {
@@ -76,9 +84,13 @@
     display: none;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.6;
+  }
+
+  &:focus::before,
+  &:focus::after {
+    background-color: $page--focus;
   }
 
   &:active {

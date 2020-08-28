@@ -11,14 +11,23 @@
     }
   }
 
+  &--footer {
+    width: 128px;
+    height: 24px;
+  }
+
   &[href] {
-    &:hover,
-    &:focus {
+    &:hover {
+      filter: none;
       opacity: 0.8;
     }
 
     &:active {
       opacity: 0.6;
     }
+  }
+
+  &:focus {
+    filter: drop-shadow(0 0 4px $page--focus);
   }
 }

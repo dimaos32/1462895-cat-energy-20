@@ -19,6 +19,7 @@ $basic-site: #68b738;
 $basic-site-dim: #5eaa2f;
 
 $special-site: #64a83b;
+$special-site-dim: #63a73a;
 
 $error-site: #ff8282;
 
@@ -49,6 +50,8 @@ $page--txt: $dark-dim;
 $page--txt-alt: $black;
 $page--bg: $white;
 $page--bg-alt: $light-bright;
+$page--focus: $basic-site;
+$page--focus-alt: $dark-dim;
 
 $main-nav--btn: $black;
 
@@ -57,7 +60,7 @@ $site-list--border-mobile: $light;
 $site-list--border-tablet: $basic-site;
 
 $promo--txt-mobile: $white;
-$promo--bg-desktop: $special-site;
+$promo--bg: $special-site;
 
 $program--link: $black;
 $program--border: $grey-light;
@@ -67,6 +70,7 @@ $how-it-works--icon-bg: $basic-site;
 $how-it-works--border: $light;
 
 $feedback--bg: $light-snow;
+$feedback--bg-desktop: $light-bright;
 $feedback--border: $grey;
 
 $range-compare--bg: $grey-light;
@@ -109,3 +113,4 @@ $form--icon-error: $error-site;
 
 $form--radio: $grey;
 $form--radio-hover: $grey-almost-dark;
+$form--radio-focus: $dark-dim;

@@ -1,26 +1,16 @@
-.copyright {
+
+.copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.copyright__text {
-  margin: 0;
   font-size: 16px;
   line-height: 1.1;
-}
-
-.copyright__link {
-  display: block;
+  color: $page--txt;
   outline: none;
-
-  .copyright__line {
-    fill: $social--color;
-  }
 
   &:hover,
   &:focus {
-    .copyright__line {
+    .copyright__icon {
       fill: $social--color-hover;
     }
   }
@@ -28,8 +18,11 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  svg {
-    display: block;
-  }
+.copyright__icon {
+  margin-left: 16px;
+  margin-right: -6px;
+  flex-shrink: 0;
+  fill: $social--color;
 }

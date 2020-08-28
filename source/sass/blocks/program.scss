@@ -56,7 +56,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: 45px;
+      top: 50px;
       left: 50px;
       right: auto;
       width: 100px;
@@ -82,7 +82,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: 39px;
+      top: 44px;
       left: 65px;
       right: auto;
       width: 70px;
@@ -108,7 +108,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: 65px;
+      top: 70px;
       left: 31px;
       right: auto;
       width: 134px;
@@ -154,7 +154,7 @@
     width: 375px;
     min-height: 95px;
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 16px;
     line-height: 1.5;
     color: $page--txt-alt;
@@ -168,9 +168,7 @@
 }
 
 .program__link {
-  position: relative;
   display: block;
-  width: max-content;
   margin-top: 20px;
   font-size: 16px;
   line-height: 1;
@@ -179,19 +177,26 @@
   color: $program--link;
   outline: none;
 
-  &::before {
+  &::after {
     content: "";
-    position: absolute;
-    top: 3px;
-    right: -47px;
+    display: inline-block;
     width: 32px;
-    height: 10px;
-    background: url("../img/icon-right-arrow-long.svg") left top no-repeat;
+    height: 1em;
+    margin-left: 17px;
+    background: url("../img/icon-right-arrow-long.svg") left center no-repeat;
   }
 
-  &:hover::before,
-  &:focus::before {
-    background: url("../img/icon-right-arrow-verylong.svg") left top no-repeat;
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:focus {
+    color: $page--focus;
+  }
+
+  &:hover {
+    color: $program--link;
   }
 
   &:active {
@@ -202,9 +207,8 @@
     margin-top: 0;
     font-size: 20px;
 
-    &::before {
-      top: 5px;
-      right: -57px;
+    &::after {
+      margin-left: 25px;
     }
   }
 

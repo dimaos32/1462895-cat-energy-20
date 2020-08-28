@@ -13,6 +13,10 @@
   margin: 20px;
   outline: none;
 
+  @media (min-width: $tablet-width) {
+    margin: 20px 15px;
+  }
+
   .social__icon {
     fill: $social--color;
   }

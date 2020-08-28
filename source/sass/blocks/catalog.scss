@@ -2,6 +2,7 @@
   @media (max-width: $mobile-width-only) {
     width: 100%;
     padding: 0;
+    border-top: 1px solid $site-list--border-mobile;
   }
 }
 
@@ -24,6 +25,8 @@
 
 .catalog__item {
   @media (max-width: $mobile-width-only) {
+    margin-top: -1px;
+    border-top: 1px solid $product-card--border;
     border-bottom: 1px solid $product-card--border;
   }
 }
@@ -40,7 +43,6 @@
 
   @media (max-width: $mobile-width-only) {
     width: 280px;
-    border-bottom: 1px solid $catalog--border;
   }
 
   @media (min-width: $tablet-width) {

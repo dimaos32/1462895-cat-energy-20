@@ -1,6 +1,10 @@
 .program-selection {
   padding: 30px 0;
 
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $site-list--border-mobile;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 50px 0 70px;
   }
@@ -109,7 +113,7 @@
     position: relative;
 
     &:not(:last-of-type) {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
   }
 
@@ -152,9 +156,10 @@
   flex-shrink: 1;
   width: 100%;
   margin-left: 15px;
-  padding: 15px;
+  padding: 13px;
   font: inherit;
   color: inherit;
+  text-transform: uppercase;
   border: 1px solid $form--input;
   outline: none;
 
@@ -164,7 +169,7 @@
 
   &:focus {
     border: 2px solid $form--input-focus;
-    padding: 14px;
+    padding: 12px;
 
     @media (min-width: $tablet-width) {
       padding: 9px 19px;
@@ -194,15 +199,11 @@
   }
 
   .program-selection__input:focus + & {
-    path {
-      fill: $form--icon-active;
-    }
+    fill: $form--icon-active;
   }
 
   .program-selection__input--error + & {
-    path {
-      fill: $form--icon-error;
-    }
+    fill: $form--icon-error;
   }
 
   @media (min-width: $tablet-width) {
@@ -252,7 +253,7 @@
     }
 
     &:focus + .program-selection__label-description::before {
-      border-color: $form--radio-hover;
+      border: 2px solid $form--radio-focus;
     }
   }
 
@@ -289,7 +290,7 @@
   background-color: $page--bg;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
     margin-left: 40px;
     padding: 0 30px;
     font-size: 36px;
@@ -331,7 +332,7 @@
 
 .program-selection__type {
   margin: 0;
-  padding: 25px 20px;
+  padding: 25px 20px 30px;
   border: none;
   border-bottom: 1px solid $program-selection--border-alt;
 
@@ -353,6 +354,10 @@
   border: none;
 
   @media (min-width: $tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-top: 70px;
   }
 }
@@ -381,7 +386,7 @@
   border: none;
 
   @media (min-width: $tablet-width) {
-    margin-top: 70px;
+    margin-top: 65px;
   }
 }
 
@@ -398,6 +403,7 @@
 .program-selection__comment-field {
   display: block;
   width: 100%;
+  height: 150px;
   padding: 15px;
   font-size: 16px;
   line-height: 1.1;
@@ -418,6 +424,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    height: 175px;
     font-size: 20px;
     line-height: 1.5;
   }
@@ -425,14 +432,22 @@
 
 .program-selection__additional {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 0;
   padding-bottom: 40px;
   border: none;
 
   @media (min-width: $tablet-width) {
     margin-top: 65px;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
+
+    .program-selection__legend {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 65px;
   }
 }
 
@@ -461,6 +476,10 @@
     }
   }
 
+  &:focus + .program-selection__label-description::before {
+    border: 2px solid $form--radio-focus;
+  }
+
   &:checked {
     & + .program-selection__label-description {
       &::after {
@@ -472,10 +491,6 @@
         height: 14px;
         background: url("../img/icon-tick.svg") no-repeat;
       }
-    }
-
-    &:focus + .program-selection__label-description::before {
-      border-color: $form--radio-hover;
     }
   }
 
@@ -502,6 +517,8 @@
 }
 
 .program-selection__additional-container {
+  padding-top: 5px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

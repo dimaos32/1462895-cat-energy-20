@@ -1,19 +1,22 @@
 .promo {
   @media (max-width: $mobile-width-only) {
-    background: linear-gradient(to bottom, $promo--bg-desktop 305px, transparent 305px);
+    height: 305px;
+    margin-bottom: 195px;
+
+    background: linear-gradient(to right, $promo--bg 50%, $special-site-dim 50%);
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 80px;
     background:
       url("../img/index-background-desktop@1x.jpg") bottom right no-repeat,
-      linear-gradient(to right, transparent 50%, $promo--bg-desktop 50%);
+      linear-gradient(to right, transparent 50%, $promo--bg 50%);
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
     background:
       url("../img/index-background-desktop@2x.jpg") bottom right / 720px 696px no-repeat,
-      linear-gradient(to right, transparent 50%, $promo--bg-desktop 50%);
+      linear-gradient(to right, transparent 50%, $promo--bg 50%);
   }
 }
 
@@ -41,11 +44,11 @@
 
   @media (min-width: $desktop-width) {
     min-height: 695px;
-    padding: 120px;
+    padding: 190px;
     padding-top: 225px;
     text-align: left;
     color: $page--txt-alt;
-    background: url("../img/index-can-desktop@1x.png") 488px 141px no-repeat;
+    background: url("../img/index-can-desktop@1x.png") 558px 141px no-repeat;
   }
 
   @media (min-resolution: 2dppx) {
@@ -75,9 +78,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding: 0 8px;
     margin-bottom: 40px;
     width: 500px;
     font-size: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -87,7 +95,12 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding: 0 8px;
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
